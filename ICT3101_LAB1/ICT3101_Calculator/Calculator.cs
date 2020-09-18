@@ -56,14 +56,14 @@ namespace ICT3101_Calculator
             }
         }
 
-        public double factorial(int number)
+        public double factorial(int number, int f)
         {
             if(number < 0)
                 throw new ArgumentException();
             else if (number == 1)
                 return 1;
             else
-                return number * factorial(number - 1);
+                return number * factorial(number - 1, f);
         }
     }
 }
