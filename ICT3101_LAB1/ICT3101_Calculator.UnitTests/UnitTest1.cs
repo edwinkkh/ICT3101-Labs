@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System.Security.Cryptography;
 
 namespace ICT3101_Calculator.UnitTests
 {
@@ -45,6 +46,12 @@ namespace ICT3101_Calculator.UnitTests
             double result = _calculator.Divide(10, 20);
             // Assert
             Assert.That(result, Is.EqualTo(0.5));
+        }
+
+        [Test]
+        public void Divide_WithNegativeInputs_ResultThrowArgumentException()
+        {
+            Assert.That(() => _calculator.Divide(0, 0), Throws.ArgumentException);
         }
     }
 }
