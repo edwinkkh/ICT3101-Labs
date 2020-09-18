@@ -65,5 +65,15 @@ namespace ICT3101_Calculator
             else
                 return number * factorial(number - 1, f);
         }
+
+        public double areaTriange(int length, int height)
+        {
+            return 0.5 * length * height;
+        }
+
+        public double areaCircle(int radius)
+        {
+            return Math.PI * radius * radius;
+        }
     }
 }

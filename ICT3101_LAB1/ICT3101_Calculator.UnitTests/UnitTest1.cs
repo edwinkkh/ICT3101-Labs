@@ -22,7 +22,7 @@ namespace ICT3101_Calculator.UnitTests
         }
 
         [Test]
-        public void Subtract_WhenSubtractTwoNumbers_ResultEqualToSum()
+        public void Subtract_WhenSubtractTwoNumbers_ResultEqualToSubtract()
         {
             // Act
             double result = _calculator.Subtract(10, 20);
@@ -31,7 +31,7 @@ namespace ICT3101_Calculator.UnitTests
         }
 
         [Test]
-        public void Multiply_WhenMultiplyTwoNumbers_ResultEqualToSum()
+        public void Multiply_WhenMultiplyTwoNumbers_ResultEqualToMultiply()
         {
             // Act
             double result = _calculator.Multiply(10, 20);
@@ -40,7 +40,7 @@ namespace ICT3101_Calculator.UnitTests
         }
 
         [Test]
-        public void Divide_WhenDivideTwoNumbers_ResultEqualToSum()
+        public void Divide_WhenDivideTwoNumbers_ResultEqualToDivide()
         {
             // Act
             double result = _calculator.Divide(10, 20);
@@ -58,7 +58,7 @@ namespace ICT3101_Calculator.UnitTests
         }
 
         [Test]
-        public void Factorial_WhenMultiple_ResultEqualSum()
+        public void Factorial_WhenMultiple_ResultEqualFactorial()
         {
             double result = _calculator.factorial(5, 5);
             // Assert
@@ -71,6 +71,22 @@ namespace ICT3101_Calculator.UnitTests
         public void Factorial_WithNegativeInputs_ResultThrowArgumentException(int num, int f)
         {
             Assert.That(() => _calculator.factorial(num, f), Throws.ArgumentException);
+        }
+
+        [Test]
+        public void AreaTriange_WhenValidHeightAndLength_ResultsEqualToArea()
+        {
+            double result = _calculator.areaTriange(3, 6);
+            // Assert
+            Assert.That(result, Is.EqualTo(9));
+        }
+
+        [Test]
+        public void AreaCircle_WhenValidRadius_ResultsEqualToArea()
+        {
+            double result = _calculator.areaCircle(3);
+            // Assert
+            Assert.That(result, Is.EqualTo(28.274333882308138));
         }
     }
 }
