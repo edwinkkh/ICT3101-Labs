@@ -55,5 +55,13 @@ namespace ICT3101_Calculator
                 return (num1 / num2);
             }
         }
+
+        public double factorial(int number)
+        {
+            if (number == 1)
+                return 1;
+            else
+                return number * factorial(number - 1);
+        }
     }
 }

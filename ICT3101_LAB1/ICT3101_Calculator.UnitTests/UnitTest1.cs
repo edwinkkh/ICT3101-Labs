@@ -49,9 +49,20 @@ namespace ICT3101_Calculator.UnitTests
         }
 
         [Test]
-        public void Divide_WithNegativeInputs_ResultThrowArgumentException()
+        [TestCase(0, 0)]
+        [TestCase(0, 10)]
+        [TestCase(10, 0)]
+        public void Divide_WithNegativeInputs_ResultThrowArgumentException(int a, int b)
         {
-            Assert.That(() => _calculator.Divide(0, 0), Throws.ArgumentException);
+            Assert.That(() => _calculator.Divide(a, b), Throws.ArgumentException);
+        }
+
+        [Test]
+        public void Factorial_WhenMultiple_ResultEqualSum()
+        {
+            double result = _calculator.factorial(3);
+            // Assert
+            Assert.That(result, Is.EqualTo(6));
         }
     }
 }
