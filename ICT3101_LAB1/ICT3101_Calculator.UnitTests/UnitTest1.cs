@@ -64,5 +64,13 @@ namespace ICT3101_Calculator.UnitTests
             // Assert
             Assert.That(result, Is.EqualTo(6));
         }
+
+        [Test]
+        [TestCase(-1)]
+        [TestCase(0)]
+        public void Factorial_WithNegativeInputs_ResultThrowArgumentException(int f)
+        {
+            Assert.That(() => _calculator.factorial(f), Throws.ArgumentException);
+        }
     }
 }

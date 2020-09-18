@@ -58,7 +58,9 @@ namespace ICT3101_Calculator
 
         public double factorial(int number)
         {
-            if (number == 1)
+            if(number < 0)
+                throw new ArgumentException();
+            else if (number == 1)
                 return 1;
             else
                 return number * factorial(number - 1);
