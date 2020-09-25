@@ -60,17 +60,17 @@ namespace ICT3101_Calculator.UnitTests
         [Test]
         public void Factorial_WhenMultiple_ResultEqualFactorial()
         {
-            double result = _calculator.factorial(5, 5);
+            double result = _calculator.factorial(5);
             // Assert
             Assert.That(result, Is.EqualTo(120));
         }
 
         [Test]
-        [TestCase(-1, 1)]
-        [TestCase(0, 1)]
-        public void Factorial_WithNegativeInputs_ResultThrowArgumentException(int num, int f)
+        [TestCase(-1)]
+        [TestCase(0)]
+        public void Factorial_WithNegativeInputs_ResultThrowArgumentException(int num)
         {
-            Assert.That(() => _calculator.factorial(num, f), Throws.ArgumentException);
+            Assert.That(() => _calculator.factorial(num), Throws.ArgumentException);
         }
 
         [Test]
