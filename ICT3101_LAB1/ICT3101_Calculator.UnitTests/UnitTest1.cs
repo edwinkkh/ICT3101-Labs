@@ -48,14 +48,14 @@ namespace ICT3101_Calculator.UnitTests
             Assert.That(result, Is.EqualTo(0.5));
         }
 
-        [Test]
+        /*[Test]
         [TestCase(0, 0)]
         [TestCase(0, 10)]
         [TestCase(10, 0)]
         public void Divide_WithNegativeInputs_ResultThrowArgumentException(int a, int b)
         {
             Assert.That(() => _calculator.Divide(a, b), Throws.ArgumentException);
-        }
+        } */
 
         [Test]
         public void Factorial_WhenMultiple_ResultEqualFactorial()

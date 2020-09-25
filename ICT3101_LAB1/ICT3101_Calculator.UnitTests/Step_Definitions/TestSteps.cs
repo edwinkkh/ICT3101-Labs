@@ -7,18 +7,23 @@ namespace ICT3101_Calculator.UnitTests.Step_Definitions
     [Binding]
     public class TestSteps
     {
-        private Calculator _calculator;
+        private CalculatorContext _calculatorContext;
         private double _result;
+        
+        public TestSteps(CalculatorContext calculatorContext)
+        {
+            _calculatorContext = calculatorContext;
+        }
+
         [Given(@"a calculator")]
         public void GivenACalculator()
         {
-            _calculator = new Calculator();
         }
-        
+
         [When(@"I have entered ""(.*)"" and ""(.*)"" into the calculator press add")]
         public void WhenIHaveEnteredAndIntoTheCalculatorPressAdd(int p0, int p1)
         {
-            _result = _calculator.Add(p0, p1);
+            _result = _calculatorContext.Calculator.Add(p0, p1);
         }
         
         [Then(@"The result should be ""(.*)""")]

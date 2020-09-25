@@ -60,7 +60,19 @@ namespace ICT3101_Calculator
         }
         public double Divide(double num1, double num2)
         {
-            if (num1 == 0 || num2 == 0)
+            if (num1 == 0 && num2 == 0)
+            {
+                return 1;
+            }
+            else if (num1 == 0 && num2 > 0)
+            {
+                return 0;
+            }
+            else if (num1 > 0 && num2 == 0)
+            {
+                return double.PositiveInfinity;
+            }
+            else if (num1 == 0 || num2 == 0)
             {
                 throw new ArgumentException();
             }
