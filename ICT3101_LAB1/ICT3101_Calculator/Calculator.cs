@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 
 namespace ICT3101_Calculator
@@ -113,6 +114,17 @@ namespace ICT3101_Calculator
         public double availability(double MTTF, double MTBF)
         {
             return MTTF / MTBF;
+        }
+
+        public double CurrentFailureIntensity(double initalFailureDensity, double averageFail, double totalFailure)
+        {
+            return initalFailureDensity * (1 - (averageFail / totalFailure));
+        }
+
+        public double AverageFailureIntensity(double initalFailureDensity, double totalFailure, double time)
+        {
+            var result = totalFailure * (1 - Math.Exp((-initalFailureDensity/totalFailure) * time));
+            return Math.Round(result);
         }
     }
 }
