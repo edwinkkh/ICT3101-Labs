@@ -104,5 +104,15 @@ namespace ICT3101_Calculator
         {
             return Math.PI * radius * radius;
         }
+
+        public double MTBF(double MTTF, double MTTR)
+        {
+            return MTTF + MTTR;
+        }
+
+        public double availability(double MTTF, double MTBF)
+        {
+            return MTTF / MTBF;
+        }
     }
 }
