@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FileConsole
 {
-    public class FileReader
+    public class FileReader: IFileReader
     {
         public string[] Read(string path)
         {
@@ -31,14 +31,14 @@ namespace FileConsole
             }
         }
 
-        public double GenMagicNum(double input, string path)
+        public double GenMagicNum(double input, IFileReader fileReader)
         {
             double result = 0;
             int choice = Convert.ToInt16(input);
             //Dependency------------------------------
-            FileReader getTheMagic = new FileReader();
+            //   FileReader getTheMagic = new FileReader();
             //----------------------------------------
-            string[] magicStrings = getTheMagic.Read(path);
+            string[] magicStrings = fileReader.Read("MagicNumbers.txt");
             if ((choice >= 0) && (choice < magicStrings.Length))
             {
                 result = Convert.ToDouble(magicStrings[choice]);

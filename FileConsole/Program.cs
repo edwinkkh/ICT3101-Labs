@@ -29,7 +29,7 @@ namespace FileConsole
                 number = Console.ReadLine();
             }
             FileReader f = new FileReader();
-            double result = f.GenMagicNum(cleanNum, path);
+            double result = f.GenMagicNum(cleanNum, f);
 
             Console.WriteLine("magic number is " + result);
         }
