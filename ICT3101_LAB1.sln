@@ -3,12 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICT3101_Calculator.UnitTests", "ICT3101_Calculator.UnitTests\ICT3101_Calculator.UnitTests.csproj", "{060A8EE1-9555-4132-B1E0-60FCCD15E0D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICT3101_Calculator.UnitTests", "ICT3101_Calculator.UnitTests\ICT3101_Calculator.UnitTests.csproj", "{060A8EE1-9555-4132-B1E0-60FCCD15E0D3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{4D0D6853-72A7-4DAC-A663-01DECB067B0D} = {4D0D6853-72A7-4DAC-A663-01DECB067B0D}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICT3101_Calculator", "ICT3101_Calculator\ICT3101_Calculator.csproj", "{4D0D6853-72A7-4DAC-A663-01DECB067B0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICT3101_Calculator", "ICT3101_Calculator\ICT3101_Calculator.csproj", "{4D0D6853-72A7-4DAC-A663-01DECB067B0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileConsole", "FileConsole\FileConsole.csproj", "{7FCEB3BE-6FFB-4AA2-9A57-6F916FE0003D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireConsoleTest", "FireConsoleTest\FireConsoleTest.csproj", "{712E2269-4073-42EF-A70A-F1D37503A1F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +28,14 @@ Global
 		{4D0D6853-72A7-4DAC-A663-01DECB067B0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D0D6853-72A7-4DAC-A663-01DECB067B0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D0D6853-72A7-4DAC-A663-01DECB067B0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FCEB3BE-6FFB-4AA2-9A57-6F916FE0003D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FCEB3BE-6FFB-4AA2-9A57-6F916FE0003D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FCEB3BE-6FFB-4AA2-9A57-6F916FE0003D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FCEB3BE-6FFB-4AA2-9A57-6F916FE0003D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{712E2269-4073-42EF-A70A-F1D37503A1F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{712E2269-4073-42EF-A70A-F1D37503A1F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{712E2269-4073-42EF-A70A-F1D37503A1F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{712E2269-4073-42EF-A70A-F1D37503A1F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
