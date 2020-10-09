@@ -9,7 +9,7 @@ namespace ICT3101_Calculator
             bool endApp = false;
             Calculator _calculator = new Calculator();
             // Display title as the C# console calculator app.
-            Console.WriteLine("Console Calculator in C#\r");
+            Console.WriteLine("Edwin Console Calculator in C#\r");
             Console.WriteLine("------------------------\n");
             while (!endApp)
             {
