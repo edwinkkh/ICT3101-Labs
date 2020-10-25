@@ -34,7 +34,7 @@ namespace FireConsoleTest
             // Act
             double result = _reader.GenMagicNum(0, _mockFileReader.Object);
             // Assert
-            Assert.That(result, Is.EqualTo(20));
+            Assert.That(result, Is.EqualTo(84));
         }
 
         [Test]
